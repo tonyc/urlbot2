@@ -4,8 +4,8 @@ urlbot2
 Requirements 
 ------------
 
-* Ruby 1.9.2 (use rvm!)
-* Bundler (anything past 1.0.13 should be good, 1.0.15 is current) (http://www.gembundler.com)
+* Ruby 1.9.2 (use rvm! - https://rvm.beginrescueend.com/)
+* Bundler (anything past 1.0.13 should be good, latest should be fine - http://www.gembundler.com)
 
 Installation
 ------------
