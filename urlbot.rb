@@ -2,6 +2,7 @@
 
 require 'cinch'
 require 'hpricot'
+require 'htmlentities'
 require 'net/http'
 require 'open-uri'
 require 'uri'
@@ -15,7 +16,7 @@ bot = Cinch::Bot.new do
   
   on :channel do |m|
     URI.extract(m.message, "http").each do |url|
-      m.reply get_title(url) if is_html?(url)
+      m.reply HTMLEntities.new.decode(get_title(url)) if is_html?(url)
     end
   end
   
