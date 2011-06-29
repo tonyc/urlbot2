@@ -15,9 +15,7 @@ bot = Cinch::Bot.new do
   
   on :channel do |m|
     URI.extract(m.message, "http").each do |url|
-      if content_type_from_head(url) =~ %r{text/html}
-        m.reply get_title(url)
-      end
+      m.reply get_title(url) if is_html?(url)
     end
   end
   
@@ -32,6 +30,10 @@ bot = Cinch::Bot.new do
       http = Net::HTTP.new(uri.host, uri.port)
       response, data = http.head((uri.path == "" ? "/" : uri.path), nil)
       return response.content_type
+    end
+    
+    def is_html?(url)
+      content_type_from_head(url) =~ /text\/html/
     end
   end
   
