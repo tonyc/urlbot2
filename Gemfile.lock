@@ -9,4 +9,4 @@ PLATFORMS
 
 DEPENDENCIES
   cinch (= 1.1.3)
-  hpricot
+  hpricot (= 0.8.4)
