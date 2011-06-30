@@ -13,7 +13,7 @@ Installation
 * rvm use 1.9.2
 * rvm gemset create urlbot
 * rvm gemset use 1.9.2@urlbot
-* git clone git@github.com:tonyc/urlbot2.git
+* git clone git://github.com/tonyc/urlbot2.git 
 * cd urlbot2
 * (optional, recommended) echo "rvm 1.9.2@urlbot" > .rvmrc
 * bundle install

@@ -15,7 +15,7 @@ bot = Cinch::Bot.new do
   end
   
   on :channel do |m|
-    URI.extract(m.message, "http").each do |url|
+    URI.extract(m.message, %w(http https)).each do |url|
       m.reply HTMLEntities.new.decode(get_title(url)) if is_html?(url)
     end
   end
